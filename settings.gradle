@@ -1,0 +1,6 @@
+rootProject.name = 'ase'
+
+include 'shared'
+include 'ehdp'
+include 'twitterService'
+include 'weatherService'

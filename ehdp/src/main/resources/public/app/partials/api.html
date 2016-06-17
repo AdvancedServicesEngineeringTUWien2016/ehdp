@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-2">
+        <div class="list-group panel">
+            <a class="list-group-item" href="#!/api/{{a.path}}"
+                ng-repeat="a in apis">/{{a.path}}</a>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <h1>/{{api.path}}</h1>
+        <p class="lead">Please read the <a href="{{api.termsOfUse}}">terms of use</a></p>
+        <p>{{api.description}}</p>
+        <div ng-show="api.examples.length > 0">
+            <h2>Examples</h2>
+            <div ng-repeat="e in api.examples">
+                <code>authorization: 12345678-9abc-defg-hijk-lmnopqrstuvw (http header)</code><br /><br />
+                <pre>{{e.request}}</pre>
+                <p>{{e.description}}</p>
+                <hr />
+            </div>
+        </div>
+        <div ng-show="api.link.length > 0">
+            For more examples see <a href="{{api.link}}">{{api.link}}</a><br />
+        </div>
+    </div>
+</div>
